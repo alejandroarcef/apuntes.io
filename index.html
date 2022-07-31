@@ -34,6 +34,136 @@
         </div>
     </div>
     <div class="fondo"></div>
+    <main>
+        <h2 class="subtitulo">Git</h2>
+        <article class="git">
+            <div class="ancla" id="inicinado"></div>
+            <section class="inicinado" >
+                <h3>Iniciando</h3>
+                <p>Debemos configurar el nombre de usuario y el correo. Para esto ejecutamos:</p>
+                <code>git config --global user.name "nombre" </code>
+                <code>git config --global user.email "correo" </code>
+                <p>Para configurar el editor y que la consola espere mientras se edite un archivo ejecutamos:</p>
+                <code>git config --global core.editor "code --wait"</code>
+                <p>Para configurar una cosa rara ahí ejecutamos:</p>
+                <code>git config --global core.autocrlf input</code>
+                <p>Para ver la configuración de git ejecutamos el comando:</p>
+                <code>git config -l</code>
+                <p>Para iniciar el repositorio se debe ir hasta la carpeta creada previamente y estando dentro ejecutar el comando:
+                <code>git init</code>
+                <p>automáticamente se creará la carpeta .git dentro de esta estará toda la información y configuración relacionada con este repositorio.</p> 
+            </section>
+            <div class="ancla" id="cambios"></div>
+            <section class="cambios" >
+                <h3>Agregar cambios</h3>
+                <p>Después de crear cualquier archivo o hacer cualquier cambio git sabrá que algo se adiciono o modifico pero aún no estará agregado al repositorio.</p>
+                <p>El staging es un “lugar” o “estado" temporal que se guarda en memoria ram, cuando los archivos pasan al estado staging pasan de estar untrack a track.</p>
+                <p>Para adicionar el archivo nuevo o modificado al staging ejecutamos el comando:</p>
+                <code>git add [file]</code>
+                <p>Para adicionar todos los nuevos archivos y todos los cambios al staging ejecutamos:</p>
+                <code>git add .</code>
+                <p>Para volver el archivo a el estado untrack ejecutamos:</p>
+                <code>git reset head [file]</code>
+                <p>Para sacra un archivo del estado track y que git no lo reconozca se usa el comando:</p>
+                <code>git rm --cached [file]</code>
+                <code>OJO** git checkout -- [file]</code>
+                <p>Si por alguna razón accidentalmente tienes archivos en la carpeta del repositorio que no quieres incluir y quieres borrarlos para esto ejecutas primero el comando:</p>
+                <code>git clean --dry-run</code>
+                <p>Para borrarlos definitivamente ejecutas:</p>
+                <code>git clean -f --dry-run</code>
+                <p>Para borrar un archivo de git y tambien del disco duro ejecutamos:</p>
+                <code>git rm -f [file] </code>
+                <p>Para guardar momentáneamente los cambios del staging sin hacerle commit y poder cambiar de rama le hacemos un stash para esto ejecutamos el comando:</p>
+                <code>git stash</code>
+                <p>Para ponerle un mensaje a esos cambios guardados en stash ejecutamos:</p>
+                <code>git stash save "mensaje"</code>
+                <p>Para ver los stash guardados ejecutamos:</p>
+                <code>git stash list</code>
+                <p>Puedes crear una nueva rama con estos cambios guardados en stash ejecutamos:</p>
+                <code>git stash branch [nombre]</code>
+                <p>Para recuperar los cambios que están en stash ejecutamos:</p>
+                <code>git stash pop</code>
+            </section>
+            <div class="ancla" id="commit"></div>
+            <section class="commit" >
+                <h3>Commit</h3>
+                <p>Para pasar los archivos de staging a realmente estar en el repositorio se debe hacer un commit esto se hace con el comando:</p>
+                <code>git commit -m "mensaje del commit"</code>
+                <p>Para unificar el git add y el git commit ejecutamos el comando:</p>
+                <code>git commit -am "mensaje del commit"</code>
+                <p>Automaticamente a cada commit se le asignara un id este es un indicador de commit</p>
+                <p>Para agregar cambios que están en staging a un commit anterior se usa el comando:</p>
+                <code>*OJO* git commit --amend</code>
+                <p>Cada commit es una nueva versión del proyecto, aunque normalmente para definir una nueva versión se le asigna un tag a un commit especifico ya que no es practico establecer una versión por cada cambio, sino que cuando se hagan cierta cantidad de cambios significativos y que funcionen correctamente entonces se decide establecer una nueva versión.</p>
+                <p>Para agregar un tag ejecutamos el comando:</p>
+                <code>git tag -a [nombre del tag] -m "mensaje" [id del commit]</code>
+                <p>Para ver los tags existentes ejecutamos:</p>
+                <code>git show-ref --tags</code>
+                <p>Para subir los tags a github ejecutamos:</p>
+                <code>git push origin :refs/tags/ndeltag</code>
+                <p>Para borrar un tag ejecutamos:</p>
+                <code>git tag -d [nombre del tag]</code>
+            </section>
+            <div class="ancla" id="vercommit"></div>
+            <section class="vercommit" >
+                <h3>Ver los commit</h3>
+                <p>Para ver el estado de los archivos ejecutamos el comando:</p>
+                <code>git status</code>
+                <p>Para comparar los cambios que no estén en staged ejecutamos:</p>
+                <code>git diff</code>
+                <p>Para ver lo que hay en una rama que no hay en otra ejecutamos:</p>
+                <code>git diff [branchB] [branchA]</code>
+                <p>Para comparar los cambios que esten en staging ejecutamos:</p>
+                <code>git diff --staged </code>
+                <p>Para hacer una comparación entre commits y ver los cambios ejecutamos el comando:</p>
+                <code>git diff [id del commit] [id del commit] </code>
+                <p>Para ver solo los commit de un archivo especifico se ejecuta:</p>
+                <code>git log [file]</code>
+                <p>Para ver todos los commit ejecutamos:</p>
+                <code>git log</code>
+                <p>Para ver los commit de una rama que no estan en la otra ejecutamos:</p>
+                <code>git log [branchB] [branchA]</code>
+                <p>Para ver los commit mas resumidos ejecutamos:</p>
+                <code>git log --oneline </code>
+                <p>Para ver un commit especifico se ejecuta:</p>
+                <code>git log -s [id del commit]</code>
+                <p>Para ver los commit por autores ejecutamos:</p>
+                <code>git shortlog</code>
+                <p>Para ver los commit con un grafico visual ejecutamos:</p>
+                <code>git log --graph</code>
+                <p>Para ver los commit con mas detalles ejecutamos:</p>
+                <code>git log --stat </code>
+                <p>Para ver la historia completa (TODO) ejecutamos el comando:</p>
+                <code>git reflog</code>
+                <p>Para saber quien escribió un archivo ejecutamos</p>
+                <code>git blame [file]</code>
+                <p>Para saber quien escribió cada línea del archivo ejecutamos:</p>
+                <code>git blame [file] -L5,13</code>
+                <p>Para buscar cosas dentro del repo usamos el comando:</p>
+                <code>git grep "palabra"</code>
+                <p>Para resetear todo a un commit anterior ejecutamos el comando:</p>
+                <code>git reset [id del commit]  --hard</code>
+                <p>Para configurar alias ejecutamos:</p>
+                <code>git config --global alias.[palabra] codigo</code>
+            </section>
+            <div class="ancla" id="branch"></div>
+            <section class="branch" >
+                <h3>Ramas</h3>
+                <p>Por defecto al crear el repositorio se crea la rama master, esta es la rama principal, se debería crear otra rama que normalmente se llama development y en esta empezar a desarrollar el proyecto y cuando te asegures de que los códigos son correctos y funcionen iras actualizando la rama master.</p>
+                <p>A la rama master, que es la principal en lo posible no se le pasaran errores estos deben de ser solucionados en la rama development, de esta también pueden derivar diversas ramas en dependencia del proyecto, normalmente para los pequeños bug que se pueden solucionar rápidamente se crea una rama normalmente llamada hotfix.</p>
+                <p>Para crear una nueva rama se ejecuta el comando>:</p>
+                <code>git branch [nombre]</code>
+                <p>Para ver todas las ramas existentes se ejecuta:</p>
+                <code>git branch --all</code>
+                <p>Para cambiar de posición de una rama a otra se ejecuta el comando:</p>
+                <code>git checkout [nombre de la rama]</code>
+                <p>La conexión de una rama a otra se llama merge para hacer merge nos posicionamos en la rama a la que queremos traer los cambios y ejecutamos el comando:</p>
+                <code>git merge [nombre de la rama de origen]</code>
+                <p>Para traer un commit de una rama a otra se usa el comando:</p>
+                <code>git cherry-pick [id del commit]</code>
+            </section> 
+        </article>
+    </main>
     </body>
     <footer>
         
