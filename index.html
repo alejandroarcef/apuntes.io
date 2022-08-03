@@ -161,7 +161,33 @@
                 <code>git merge [nombre de la rama de origen]</code>
                 <p>Para traer un commit de una rama a otra se usa el comando:</p>
                 <code>git cherry-pick [id del commit]</code>
-            </section> 
+            </section>
+        </article>
+        <p class="ancla" id="github"></p>
+        <h2 class="subtitulo">Github</h2>
+        <article class="github" >
+            <div class="ancla" id="degitagithub"></div>
+            <section class="degitagithub" >
+                <h3>De git a github</h3>
+                <p>Para conectar con github primero configuramos la llave ssh estando en el home del directorio ejecutamos el código:</p>
+                <code>ssh-keygen -t rsa -b 4096 -C "correo"</code>
+                <p>Aceptar el directorio donde se guarda la contraseña</p>
+                <p>Crear una contraseña adicional ( passphrase )</p>
+                <p>Revisar que el servidor de llaves ssh esta prendido para esto ejecutamos el comando:</p>
+                <code>eval $(ssh-agent -s)</code>
+                <p>Después agregar la llave con el comando:</p>
+                <code>ssh-add  ~/.ssh/id_rsa</code>
+                <p>Para copiar un repositorio hacia github primero creamos el repo en github y copiamos la url ssh después agregamos a git el origen ejecutando el comando:</p>
+                <code>git remote add origin [direccion ssh]</code>
+                <p>Primero hacemos el primer pull con el comando:</p>
+                <code>git pull origin master --allow-unrelated-histories</code>
+                <p>Después hacemos el push con el comando:</p>
+                <code>git push origin master</code>
+                <p>En github no deberían ir las imágenes estas deberían ir en un content delevery network ejemplo: imgur.com</p>
+                <p>Para que git ignore ciertos archivos que no queramos debemos crear un archivo .gitignore y dentro de este escribimos los formatos a ignorar o el nombre especifico de un archivo o carpeta.</p>
+                <p>En todos los proyectos debería existir un archivo README.md donde se detalle el proyecto.</p>
+                <p>Para hacer un fork a un repositorio agregamos un origen nuevo normalmente llamado upstream desde este nos traemos los cambios desde el repositorio original a nuestro local haciendo pull y después hacemos push a nuestro repositorio en github.</p>
+            </section>
         </article>
     </main>
     </body>
