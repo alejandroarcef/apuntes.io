@@ -35,3 +35,31 @@ header{
     z-index: 20;
     padding-top: 10px;
 }
+
+nav{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    background-color: var(--griso);
+    justify-content: space-between;
+    align-items: flex-end;
+    color: var(--grisc);
+    height: 30px;
+    padding: 20px 70px;
+    z-index: 20;
+    box-shadow: var(--sombra1);
+    margin-top: 25px;
+}
+
+nav a{
+    color: var(--grisc);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: -15px; 
+}
+
+nav a:hover{
+    box-shadow: var(--sombra1);  
+}
