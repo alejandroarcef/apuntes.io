@@ -134,3 +134,26 @@ input{
 .indice a:last-of-type{
     border-radius: 0px 0px 10px 10px;
 }
+
+.fondo{
+    height: 350px;
+    background-image: url(gitygithublogo.svg);
+    background-color: var(--griso);
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center -150px;
+    width: 100%;
+}
+
+.subtitulo{
+    text-align: center;
+    background-color: var(--azul);
+    font-size: 30px;
+    padding-bottom: 20px;
+    padding-top: 10px; 
+}
+
+.subtitulo:nth-child(n+2){
+    background-color: var(--amarillo);
+}
