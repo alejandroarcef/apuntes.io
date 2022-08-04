@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --griso: rgb(32,32,32);
+    --grism: rgb(64,64,64);
+    --grismc: rgb(96,96,96);
+    --grisn: rgb(128,128,128);
+    --grisc: rgb(192,192,192);
+    --amarillo:rgb(255, 255, 192);
+    --azul: rgb(0,192,255);
+    --naranja: rgb(255, 28, 0);
+    --sombra1: 0px 5px 5px rgba(0,0,0,0.5); 
+}
