@@ -16,3 +16,22 @@
     --naranja: rgb(255, 28, 0);
     --sombra1: 0px 5px 5px rgba(0,0,0,0.5); 
 }
+
+body{
+    background-color: white;
+}
+
+#titulo{
+    background-color: var(--griso);
+    padding: 10px;
+}
+
+header{
+    position: relative;
+    background-color: var(--griso);
+    color: var(--grisc);
+    text-align: center;
+    height: 40px;
+    z-index: 20;
+    padding-top: 10px;
+}
