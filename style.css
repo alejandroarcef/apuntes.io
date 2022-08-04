@@ -298,3 +298,62 @@ footer{
     margin-top: 220px;
     background-color: var(--grism);
 }
+
+@media (max-width: 900px) {
+    .fondo {
+        background-position: center -150px;  
+    }  
+}
+
+@media (max-width: 800px) {
+    .fondo {
+        background-position: center -130px;  
+    }  
+}
+
+@media (max-width: 700px) {
+    .fondo {
+        background-position: center -80px;  
+    }
+}
+
+@media (min-width: 600px) {
+    article{
+        padding: 50px;
+    }
+}
+
+@media (max-width: 560px) {
+    .fondo {
+        background-position: center -50px;
+        height: 300px;   
+    }  
+}
+
+
+@media (max-width: 460px) {
+    .fondo {
+        background-position: center -10px;
+        height: 250px;    
+    }  
+}
+
+@media (max-width: 415px) {
+    #titulo{
+            font-size: 28px;   
+        }
+
+    nav{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    #titulo{
+        font-size: 23px;
+    }
+
+    nav{
+        margin-top: 15px;
+    }
+}
