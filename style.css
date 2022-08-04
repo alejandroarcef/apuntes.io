@@ -63,3 +63,74 @@ nav a{
 nav a:hover{
     box-shadow: var(--sombra1);  
 }
+
+.ltmenu{
+    margin-bottom: -15px;
+}
+
+.ltmenu:hover{
+    box-shadow: var(--sombra1);
+    border-radius: 5px;   
+}
+
+.tmenu{
+    cursor: pointer;
+    padding: 5px 10px; 
+}
+
+input{
+    display: none;
+}
+
+.sindice{
+    position: fixed;
+    width: 250px;
+    height: 150vh;
+    right: -50px;
+    top: 20px;/*OJO*/
+    z-index: 10;
+    transition:  0.5s;
+}
+
+:checked ~ .sindice{
+    right: -300px;
+}
+
+.indice{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+    width: 200px;
+    background-color: var(--griso);
+    padding: 10px;
+    padding-top: 100px;
+    color: var(--grisc);
+    box-shadow: -10px 0px 10px rgba(0,0,0,0.5); 
+}
+
+.indice a{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--grisc);
+    background-color: var(--grism);
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.indice a:hover{
+    background-color: var(--grismc);
+    box-shadow: var(--sombra1); 
+}
+
+.indice a:first-of-type{
+    border-radius: 10px 10px 0px 0px;
+}
+
+.indice a:last-of-type{
+    border-radius: 0px 0px 10px 10px;
+}
