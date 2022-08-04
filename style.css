@@ -157,3 +157,26 @@ input{
 .subtitulo:nth-child(n+2){
     background-color: var(--amarillo);
 }
+
+article{
+    position: relative;
+    width: 100%;
+    background-color: var(--amarillo);
+    color: var(--griso);
+    padding: 10px;
+    padding-bottom: 40px;
+    border-bottom: 5px dotted var(--grism);
+    z-index: 1;  
+}
+
+article:nth-child(2){
+    background-color: var(--azul);
+    border-bottom: 0px;
+    border-bottom: 5px dotted var(--amarillo);
+}
+
+article ~ h2{
+    text-align: center;
+    background-color: var(--amarillo);
+    font-size: 30px;
+}
