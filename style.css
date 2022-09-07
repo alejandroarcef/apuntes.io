@@ -146,6 +146,53 @@ input{
     width: 100%;
 }
 
+main{
+    /* background-color: var(--griso); */
+    background-color: deepskyblue;
+    padding-top: 20px;
+}
+/* Hacer una nota divertida*/
+.nota{
+    position: relative;
+    background-color: white;
+    padding: 10px;
+    color: var(--griso);
+    font-weight: bold;
+    margin: 10px 35px;
+    margin-top: 0px;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: var(--sombra1);
+    left: 0px;
+    transition: 1s;
+
+}
+
+:checked ~ .nota{
+    left: -325px;     
+}
+
+.nota > h3{
+    text-align: center;
+    color: rgb(255, 0, 0);
+    margin-bottom: 20px;
+}
+
+#actnota{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 8px 8px 0px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    height: 50px;
+    width: 25px;
+    transform: translatey(-50%);
+    cursor: pointer;
+    
+}
+
 .subtitulo{
     text-align: center;
     background-color: var(--azul);
@@ -154,7 +201,7 @@ input{
     padding-top: 10px; 
 }
 
-.subtitulo:nth-child(n+2){
+.subtitulogh{
     background-color: var(--amarillo);
 }
 
@@ -169,7 +216,7 @@ article{
     z-index: 1;  
 }
 
-article:nth-child(2){
+.git{
     background-color: var(--azul);
     border-bottom: 0px;
     border-bottom: 5px dotted var(--amarillo);
