@@ -166,11 +166,38 @@ main{
     box-shadow: var(--sombra1);
     left: 0px;
     transition: 1s;
+    
 
 }
 
+@keyframes abreme{
+    0%{
+        left: -335px;
+    }
+
+    25%{
+        left: -330px;
+    }
+
+    50%{
+        left: -328px;
+        background-color: rgb(190,190,190);
+    }
+
+    75%{
+        left: -330px;
+    }
+
+    100%{
+        left: -335px;
+    }
+}
+
 :checked ~ .nota{
-    left: -325px;     
+    animation-name: abreme;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+
 }
 
 .nota > h3{
